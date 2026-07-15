@@ -1,0 +1,3418 @@
+# source: wycheproof aes_ccm_test.json (commit fc24cd5b787d)
+# algorithm: AES-CCM, schema: aead_test_schema_v1.json
+# converted: 2026-07-14 by scripts/convert_wycheproof.py - do not edit by hand
+# curation: all non-valid records + up to 3 valid per group
+
+[ivSize = 96]
+[keySize = 128]
+[tagSize = 128]
+[type = AeadTest]
+
+tcId = 1
+comment = 
+flags = Pseudorandom
+key = bedcfb5a011ebc84600fcb296c15af0d
+iv = 438a547a94ea88dce46c6c85
+aad = 
+msg = 
+ct = 
+tag = 25d1a38495a7dea45bda049705627d10
+result = valid
+
+tcId = 2
+comment = 
+flags = Pseudorandom
+key = 384ea416ac3c2f51a76e7d8226346d4e
+iv = b30c084727ad1c592ac21d12
+aad = 
+msg = 35
+ct = d7
+tag = 6be3fd13b7065afc19e3b8a3b96b39fb
+result = valid
+
+tcId = 3
+comment = 
+flags = Pseudorandom
+key = cae31cd9f55526eb038241fc44cac1e5
+iv = b5e006ded553110e6dc56529
+aad = 
+msg = d10989f2c52e94ad
+ct = e64d0b64ebb381ec
+tag = 25409c795d491d804e583917227b73c7
+result = valid
+
+tcId = 52
+comment = Flipped bit 0 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = 3d6d5f66430ad65bb034077297f0929a
+result = invalid
+
+tcId = 53
+comment = Flipped bit 1 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = 3e6d5f66430ad65bb034077297f0929a
+result = invalid
+
+tcId = 54
+comment = Flipped bit 7 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = bc6d5f66430ad65bb034077297f0929a
+result = invalid
+
+tcId = 55
+comment = Flipped bit 8 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = 3c6c5f66430ad65bb034077297f0929a
+result = invalid
+
+tcId = 56
+comment = Flipped bit 31 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = 3c6d5fe6430ad65bb034077297f0929a
+result = invalid
+
+tcId = 57
+comment = Flipped bit 32 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = 3c6d5f66420ad65bb034077297f0929a
+result = invalid
+
+tcId = 58
+comment = Flipped bit 33 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = 3c6d5f66410ad65bb034077297f0929a
+result = invalid
+
+tcId = 59
+comment = Flipped bit 63 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = 3c6d5f66430ad6dbb034077297f0929a
+result = invalid
+
+tcId = 60
+comment = Flipped bit 64 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = 3c6d5f66430ad65bb134077297f0929a
+result = invalid
+
+tcId = 61
+comment = Flipped bit 71 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = 3c6d5f66430ad65b3034077297f0929a
+result = invalid
+
+tcId = 62
+comment = Flipped bit 77 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = 3c6d5f66430ad65bb014077297f0929a
+result = invalid
+
+tcId = 63
+comment = Flipped bit 80 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = 3c6d5f66430ad65bb034067297f0929a
+result = invalid
+
+tcId = 64
+comment = Flipped bit 96 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = 3c6d5f66430ad65bb034077296f0929a
+result = invalid
+
+tcId = 65
+comment = Flipped bit 97 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = 3c6d5f66430ad65bb034077295f0929a
+result = invalid
+
+tcId = 66
+comment = Flipped bit 103 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = 3c6d5f66430ad65bb034077217f0929a
+result = invalid
+
+tcId = 67
+comment = Flipped bit 120 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = 3c6d5f66430ad65bb034077297f0929b
+result = invalid
+
+tcId = 68
+comment = Flipped bit 121 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = 3c6d5f66430ad65bb034077297f09298
+result = invalid
+
+tcId = 69
+comment = Flipped bit 126 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = 3c6d5f66430ad65bb034077297f092da
+result = invalid
+
+tcId = 70
+comment = Flipped bit 127 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = 3c6d5f66430ad65bb034077297f0921a
+result = invalid
+
+tcId = 71
+comment = Flipped bits 0 and 64 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = 3d6d5f66430ad65bb134077297f0929a
+result = invalid
+
+tcId = 72
+comment = Flipped bits 31 and 63 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = 3c6d5fe6430ad6dbb034077297f0929a
+result = invalid
+
+tcId = 73
+comment = Flipped bits 63 and 127 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = 3c6d5f66430ad6dbb034077297f0921a
+result = invalid
+
+tcId = 74
+comment = all bits of tag flipped
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = c392a099bcf529a44fcbf88d680f6d65
+result = invalid
+
+tcId = 75
+comment = Tag changed to all zero
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = 00000000000000000000000000000000
+result = invalid
+
+tcId = 76
+comment = tag changed to all 1
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = ffffffffffffffffffffffffffffffff
+result = invalid
+
+tcId = 77
+comment = msbs changed in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = bceddfe6c38a56db30b487f21770121a
+result = invalid
+
+tcId = 78
+comment = lsbs changed in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3ee9f3430f3e803c0a46b7a84cd803de
+tag = 3d6c5e67420bd75ab135067396f1939b
+result = invalid
+
+[ivSize = 96]
+[keySize = 192]
+[tagSize = 128]
+[type = AeadTest]
+
+tcId = 79
+comment = 
+flags = Pseudorandom
+key = 5019eb9fef82e5750b631758f0213e3e5fcca12748b40eb4
+iv = ff0ddb0a0d7b36d219da12b5
+aad = 
+msg = 
+ct = 
+tag = 2d03f5e8c2e5a1b43c7708dd0cbf0acd
+result = valid
+
+tcId = 80
+comment = 
+flags = Pseudorandom
+key = 21218af790428f8024d3e7e1428c9fcf578c216636d60e73
+iv = 34047bc39b9c608384dff5b8
+aad = 
+msg = e3
+ct = 39
+tag = 7450f55a21e717a1106ea0c11871f5ff
+result = valid
+
+tcId = 81
+comment = 
+flags = Pseudorandom
+key = 3a8bf543c480925632118245bcbf5d01522b987a31a33da3
+iv = 4ebc13cf4636cc7c45e560a7
+aad = 
+msg = 53fc72e71b59eeb3
+ct = 5d24d0e1a2ee9fce
+tag = e770f91a51f5b587a44cd9d3634b9706
+result = valid
+
+tcId = 130
+comment = Flipped bit 0 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 7455dfe5b5e6f2b67abe9575be8e4784
+result = invalid
+
+tcId = 131
+comment = Flipped bit 1 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 7755dfe5b5e6f2b67abe9575be8e4784
+result = invalid
+
+tcId = 132
+comment = Flipped bit 7 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = f555dfe5b5e6f2b67abe9575be8e4784
+result = invalid
+
+tcId = 133
+comment = Flipped bit 8 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 7554dfe5b5e6f2b67abe9575be8e4784
+result = invalid
+
+tcId = 134
+comment = Flipped bit 31 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 7555df65b5e6f2b67abe9575be8e4784
+result = invalid
+
+tcId = 135
+comment = Flipped bit 32 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 7555dfe5b4e6f2b67abe9575be8e4784
+result = invalid
+
+tcId = 136
+comment = Flipped bit 33 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 7555dfe5b7e6f2b67abe9575be8e4784
+result = invalid
+
+tcId = 137
+comment = Flipped bit 63 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 7555dfe5b5e6f2367abe9575be8e4784
+result = invalid
+
+tcId = 138
+comment = Flipped bit 64 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 7555dfe5b5e6f2b67bbe9575be8e4784
+result = invalid
+
+tcId = 139
+comment = Flipped bit 71 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 7555dfe5b5e6f2b6fabe9575be8e4784
+result = invalid
+
+tcId = 140
+comment = Flipped bit 77 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 7555dfe5b5e6f2b67a9e9575be8e4784
+result = invalid
+
+tcId = 141
+comment = Flipped bit 80 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 7555dfe5b5e6f2b67abe9475be8e4784
+result = invalid
+
+tcId = 142
+comment = Flipped bit 96 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 7555dfe5b5e6f2b67abe9575bf8e4784
+result = invalid
+
+tcId = 143
+comment = Flipped bit 97 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 7555dfe5b5e6f2b67abe9575bc8e4784
+result = invalid
+
+tcId = 144
+comment = Flipped bit 103 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 7555dfe5b5e6f2b67abe95753e8e4784
+result = invalid
+
+tcId = 145
+comment = Flipped bit 120 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 7555dfe5b5e6f2b67abe9575be8e4785
+result = invalid
+
+tcId = 146
+comment = Flipped bit 121 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 7555dfe5b5e6f2b67abe9575be8e4786
+result = invalid
+
+tcId = 147
+comment = Flipped bit 126 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 7555dfe5b5e6f2b67abe9575be8e47c4
+result = invalid
+
+tcId = 148
+comment = Flipped bit 127 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 7555dfe5b5e6f2b67abe9575be8e4704
+result = invalid
+
+tcId = 149
+comment = Flipped bits 0 and 64 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 7455dfe5b5e6f2b67bbe9575be8e4784
+result = invalid
+
+tcId = 150
+comment = Flipped bits 31 and 63 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 7555df65b5e6f2367abe9575be8e4784
+result = invalid
+
+tcId = 151
+comment = Flipped bits 63 and 127 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 7555dfe5b5e6f2367abe9575be8e4704
+result = invalid
+
+tcId = 152
+comment = all bits of tag flipped
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 8aaa201a4a190d4985416a8a4171b87b
+result = invalid
+
+tcId = 153
+comment = Tag changed to all zero
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 00000000000000000000000000000000
+result = invalid
+
+tcId = 154
+comment = tag changed to all 1
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = ffffffffffffffffffffffffffffffff
+result = invalid
+
+tcId = 155
+comment = msbs changed in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = f5d55f6535667236fa3e15f53e0ec704
+result = invalid
+
+tcId = 156
+comment = lsbs changed in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ef6720509035750ecafac4b3e4fac356
+tag = 7454dee4b4e7f3b77bbf9474bf8f4685
+result = invalid
+
+[ivSize = 96]
+[keySize = 256]
+[tagSize = 128]
+[type = AeadTest]
+
+tcId = 157
+comment = 
+flags = Pseudorandom
+key = 80ba3192c803ce965ea371d5ff073cf0f43b6a2ab576b208426e11409c09b9b0
+iv = 4da5bf8dfd5852c1ea12379d
+aad = 
+msg = 
+ct = 
+tag = 6dc4ef59a73ebcabb5e34c0d34d9f2d7
+result = valid
+
+tcId = 158
+comment = 
+flags = Pseudorandom
+key = cc56b680552eb75008f5484b4cb803fa5063ebd6eab91f6ab6aef4916a766273
+iv = 99e23ec48985bccdeeab60f1
+aad = 
+msg = 2a
+ct = 06
+tag = 85ca1f6c46283cb5dd5960bd34a8dc36
+result = valid
+
+tcId = 159
+comment = 
+flags = Pseudorandom
+key = 51e4bf2bad92b7aff1a4bc05550ba81df4b96fabf41c12c7b00e60e48db7e152
+iv = 4f07afedfdc3b6c2361823d3
+aad = 
+msg = be3308f72a2c6aed
+ct = 7fd4b5d3095235a3
+tag = f64d10b41e3d6928741947c50ca0391f
+result = valid
+
+tcId = 208
+comment = Flipped bit 0 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 8ac2dd770de58f0b92802fdcb9d7d410
+result = invalid
+
+tcId = 209
+comment = Flipped bit 1 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 89c2dd770de58f0b92802fdcb9d7d410
+result = invalid
+
+tcId = 210
+comment = Flipped bit 7 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 0bc2dd770de58f0b92802fdcb9d7d410
+result = invalid
+
+tcId = 211
+comment = Flipped bit 8 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 8bc3dd770de58f0b92802fdcb9d7d410
+result = invalid
+
+tcId = 212
+comment = Flipped bit 31 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 8bc2ddf70de58f0b92802fdcb9d7d410
+result = invalid
+
+tcId = 213
+comment = Flipped bit 32 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 8bc2dd770ce58f0b92802fdcb9d7d410
+result = invalid
+
+tcId = 214
+comment = Flipped bit 33 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 8bc2dd770fe58f0b92802fdcb9d7d410
+result = invalid
+
+tcId = 215
+comment = Flipped bit 63 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 8bc2dd770de58f8b92802fdcb9d7d410
+result = invalid
+
+tcId = 216
+comment = Flipped bit 64 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 8bc2dd770de58f0b93802fdcb9d7d410
+result = invalid
+
+tcId = 217
+comment = Flipped bit 71 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 8bc2dd770de58f0b12802fdcb9d7d410
+result = invalid
+
+tcId = 218
+comment = Flipped bit 77 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 8bc2dd770de58f0b92a02fdcb9d7d410
+result = invalid
+
+tcId = 219
+comment = Flipped bit 80 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 8bc2dd770de58f0b92802edcb9d7d410
+result = invalid
+
+tcId = 220
+comment = Flipped bit 96 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 8bc2dd770de58f0b92802fdcb8d7d410
+result = invalid
+
+tcId = 221
+comment = Flipped bit 97 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 8bc2dd770de58f0b92802fdcbbd7d410
+result = invalid
+
+tcId = 222
+comment = Flipped bit 103 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 8bc2dd770de58f0b92802fdc39d7d410
+result = invalid
+
+tcId = 223
+comment = Flipped bit 120 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 8bc2dd770de58f0b92802fdcb9d7d411
+result = invalid
+
+tcId = 224
+comment = Flipped bit 121 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 8bc2dd770de58f0b92802fdcb9d7d412
+result = invalid
+
+tcId = 225
+comment = Flipped bit 126 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 8bc2dd770de58f0b92802fdcb9d7d450
+result = invalid
+
+tcId = 226
+comment = Flipped bit 127 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 8bc2dd770de58f0b92802fdcb9d7d490
+result = invalid
+
+tcId = 227
+comment = Flipped bits 0 and 64 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 8ac2dd770de58f0b93802fdcb9d7d410
+result = invalid
+
+tcId = 228
+comment = Flipped bits 31 and 63 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 8bc2ddf70de58f8b92802fdcb9d7d410
+result = invalid
+
+tcId = 229
+comment = Flipped bits 63 and 127 in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 8bc2dd770de58f8b92802fdcb9d7d490
+result = invalid
+
+tcId = 230
+comment = all bits of tag flipped
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 743d2288f21a70f46d7fd02346282bef
+result = invalid
+
+tcId = 231
+comment = Tag changed to all zero
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 00000000000000000000000000000000
+result = invalid
+
+tcId = 232
+comment = tag changed to all 1
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = ffffffffffffffffffffffffffffffff
+result = invalid
+
+tcId = 233
+comment = msbs changed in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 0b425df78d650f8b1200af5c39575490
+result = invalid
+
+tcId = 234
+comment = lsbs changed in tag
+flags = ModifiedTag
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 505152535455565758595a5b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 9d2a30abc5e178f7c6317ec9498dac39
+tag = 8ac3dc760ce48e0a93812eddb8d6d511
+result = invalid
+
+[ivSize = 56]
+[keySize = 128]
+[tagSize = 128]
+[type = AeadTest]
+
+tcId = 235
+comment = 
+flags = Pseudorandom
+key = 19d532dbcc934a009ce1b94a0b31ddc7
+iv = f0bf6a9bcf6c0d
+aad = 
+msg = 
+ct = 
+tag = 7b12263aaf1e4cb6e4b406e026698209
+result = valid
+
+tcId = 236
+comment = 
+flags = Pseudorandom
+key = 8cdb7f6789271a6ef3e06461e90eaa0e
+iv = 7c0d6bceba282e
+aad = fbc4f4a52ecb4caa
+msg = 
+ct = 
+tag = 50b12c1fa4dc4b2dc4dd0eb152db419e
+result = valid
+
+tcId = 237
+comment = 
+flags = Pseudorandom
+key = 6bd7363be81b3f803c7faee607050274
+iv = 303da678d1679e
+aad = 
+msg = 539c7d6fcc0a691bd39bc43422d4e13c
+ct = 38338e924bf2ecc3ae0f5f75f2af2d30
+tag = e40bbba6734955223fab6ddb3c7bba83
+result = valid
+
+[ivSize = 64]
+[keySize = 128]
+[tagSize = 128]
+[type = AeadTest]
+
+tcId = 241
+comment = 
+flags = Pseudorandom
+key = f3434725c82a7f8bb07df1f8122fb6c9
+iv = 28e9b7851724bae3
+aad = 
+msg = 
+ct = 
+tag = 1c645830e6ee05589b70f02347e11c93
+result = valid
+
+tcId = 242
+comment = 
+flags = Pseudorandom
+key = eaf5c7e35b61c64fd899bf26506cb83c
+iv = 071ffed7585eb0b7
+aad = f0af4431f33e7e15
+msg = 
+ct = 
+tag = e5e154d43f3298896b34bb4f76b7399f
+result = valid
+
+tcId = 243
+comment = 
+flags = Pseudorandom
+key = deb62233559b57476602b5adac57c77f
+iv = d084547de55bbc15
+aad = 
+msg = d8986df0241ed3297582c0c239c724cb
+ct = 97bc3c09d5e37178e7fdd35d53239180
+tag = 3a2dc0bfde10247029f5c489e306a396
+result = valid
+
+[ivSize = 72]
+[keySize = 128]
+[tagSize = 128]
+[type = AeadTest]
+
+tcId = 247
+comment = 
+flags = Pseudorandom
+key = 2ec7a468e3649186e1f9deccdf95a229
+iv = 99fdb158fb8ebcce64
+aad = 
+msg = 
+ct = 
+tag = 658f01f90c35331cdd6986f736cc37da
+result = valid
+
+tcId = 248
+comment = 
+flags = Pseudorandom
+key = c6bc0987b5dc9432da66bdb153859fda
+iv = d768d1b80a094506b4
+aad = 4713f86a53cedd50
+msg = 
+ct = 
+tag = 4ec31dfebff4a90d5efbdb8504cd8c79
+result = valid
+
+tcId = 249
+comment = 
+flags = Pseudorandom
+key = 6a1c98e4d20bc6ad594833d6e9aa4794
+iv = 3de29d92d3018eaafc
+aad = 
+msg = f623322fef6d49cf7abfa16b5fd83951
+ct = afcbf0385f26895bcd61266006dc1d98
+tag = 7914e32d181043321234dc16d79b3576
+result = valid
+
+[ivSize = 80]
+[keySize = 128]
+[tagSize = 128]
+[type = AeadTest]
+
+tcId = 253
+comment = 
+flags = Pseudorandom
+key = 1e6c6214a6a5dd5b628c71de07788137
+iv = 40bcc315dec88bf326cc
+aad = 
+msg = 
+ct = 
+tag = dfd70e3e5a13166b460613abab928f26
+result = valid
+
+tcId = 254
+comment = 
+flags = Pseudorandom
+key = e41343e5ffe20fe48ff010b146ceaead
+iv = 5f172fbe9f8eec0fbf79
+aad = 9b46675901a4be0f
+msg = 
+ct = 
+tag = 2104bc9ecb79b71f32f27c9ee4fec640
+result = valid
+
+tcId = 255
+comment = 
+flags = Pseudorandom
+key = fc93582fa1f8b58cc9e80dd583e9bf8b
+iv = 5d4bf58798fac351a399
+aad = 
+msg = 866d5e1b0aa29004e51ea87de86e3c05
+ct = b64650b6935fb04b9742f5729f286e03
+tag = b9d3947c1605a2d58ec3f3221846c7da
+result = valid
+
+[ivSize = 88]
+[keySize = 128]
+[tagSize = 128]
+[type = AeadTest]
+
+tcId = 259
+comment = 
+flags = Pseudorandom
+key = 9d2fa75929612e1213460f998946dcec
+iv = 0e948a03dbfa10817e8826
+aad = 
+msg = 
+ct = 
+tag = 2f1fa3585b9a11ff47bd486f95572246
+result = valid
+
+tcId = 260
+comment = 
+flags = Pseudorandom
+key = 7a970406a747c2327ecbc8b107a190cd
+iv = 99b079de952d60da0d034b
+aad = 2f080b2deb6644ef
+msg = 
+ct = 
+tag = 9dca9ba441013ce9fc0ac3dbf414626d
+result = valid
+
+tcId = 261
+comment = 
+flags = Pseudorandom
+key = acab31483d9de4ad77f4e63fe41b57ae
+iv = 5c0939e71bae1a9de167d4
+aad = 
+msg = e4d72b2f7cb69bc54a49f4d5cea4f23a
+ct = 0c506843ba7bd2dc4578e6bb83fd0c8d
+tag = c275373037635bae294f99c8e46964b3
+result = valid
+
+[ivSize = 104]
+[keySize = 128]
+[tagSize = 128]
+[type = AeadTest]
+
+tcId = 265
+comment = 
+flags = Pseudorandom
+key = 694a2ae94cc2fc6c82dcd16c58a34195
+iv = 8b4de9497e78d9c73bdcb374de
+aad = 
+msg = 
+ct = 
+tag = 36b20bcb064609cbc03ae32786f72eb5
+result = valid
+
+tcId = 266
+comment = 
+flags = Pseudorandom
+key = 268c961a4fa54c214a2af8fe76a277cc
+iv = f13443da0e412f1cc7a90165c6
+aad = 4fad12b402c58029
+msg = 
+ct = 
+tag = be58071342c9348baf78104e2258e616
+result = valid
+
+tcId = 267
+comment = 
+flags = Pseudorandom
+key = 7c5aa1cd2fc171d5bb91ee74f31e1a63
+iv = 70a2a5303734517827faa7ee78
+aad = 
+msg = 4bd1d3427e0735a08f475bc73ec3648c
+ct = 9ab61214ea6611510706315f0fc9bd65
+tag = a2b3fc3c1349cbfd9ded7cc32effb389
+result = valid
+
+[ivSize = 56]
+[keySize = 192]
+[tagSize = 128]
+[type = AeadTest]
+
+tcId = 271
+comment = 
+flags = Pseudorandom
+key = b4544cae6b60b7720f3ade71e90e58c21d6e487183d4666a
+iv = 2ba3da112cf5e6
+aad = 
+msg = 
+ct = 
+tag = 341551f2c05ee9314f0eb552939e5486
+result = valid
+
+tcId = 272
+comment = 
+flags = Pseudorandom
+key = 26bddb2eb2a727e2910df94ad3e12ac130a49a8f7f41951c
+iv = c6c0ef48151b32
+aad = 7443b91e73475de1
+msg = 
+ct = 
+tag = fd7aab595dfeb3c8a1660eab043b3d01
+result = valid
+
+tcId = 273
+comment = 
+flags = Pseudorandom
+key = 806ed9cf33a1c2fa6a8bffad7937c3ea226408ebf248d176
+iv = 2bebcc0af672bf
+aad = 
+msg = be1702414868c94aeb99c1a088ba8c48
+ct = 6e6f3d3b36482c39a99d597ea582f430
+tag = 7d11f5549d87dda7b0762202270a7e28
+result = valid
+
+[ivSize = 64]
+[keySize = 192]
+[tagSize = 128]
+[type = AeadTest]
+
+tcId = 277
+comment = 
+flags = Pseudorandom
+key = d74599b3d2db81653de43b52fc994c50d0be759fab87c33a
+iv = d1c61cf8532531b5
+aad = 
+msg = 
+ct = 
+tag = bd78dfc804a420c19fb13b2f58d82c5c
+result = valid
+
+tcId = 278
+comment = 
+flags = Pseudorandom
+key = 8fc269ef34d2c2127c89493c0960ee0849fadf76667885d5
+iv = 626bf00acb930480
+aad = 13aa1748aec41042
+msg = 
+ct = 
+tag = 9c453275afb006c78f6f29079c7c3ef1
+result = valid
+
+tcId = 279
+comment = 
+flags = Pseudorandom
+key = 0b177198c8b419bf74acc3bc65b5fb3d09a915ff71add754
+iv = 8f075cbcda9831c3
+aad = 
+msg = c4b1e05ca3d591f9543e64de3fc682ac
+ct = 0148cdf90d566a8eb651409956c3695e
+tag = b10d57df83c4c79b9f590e3e5aa9e9b6
+result = valid
+
+[ivSize = 72]
+[keySize = 192]
+[tagSize = 128]
+[type = AeadTest]
+
+tcId = 283
+comment = 
+flags = Pseudorandom
+key = f162a1094012f6bfb10270cd5609a20dc24dec3727f8e598
+iv = 0562f03f5124642f40
+aad = 
+msg = 
+ct = 
+tag = a9eef8c9f9460006b73f2da2317c7b7d
+result = valid
+
+tcId = 284
+comment = 
+flags = Pseudorandom
+key = 0fa5861ef439184265112ca6ea785d214a5bb12dd108e434
+iv = 041ffcd955eb4939ff
+aad = beed0c763b56c582
+msg = 
+ct = 
+tag = 39fd1a2107540f9e6d33ad23b425ddef
+result = valid
+
+tcId = 285
+comment = 
+flags = Pseudorandom
+key = 4f589aaf03e1219585f411631a2b287f20e9cca93304d004
+iv = f0bd7863d34b6c963f
+aad = 
+msg = ca80f91329f1cfd8784bdb97dc0d5b01
+ct = 0c3f7b1e0585deaa800a7105fc141364
+tag = 9427fd74870e29db527f7df247477939
+result = valid
+
+[ivSize = 80]
+[keySize = 192]
+[tagSize = 128]
+[type = AeadTest]
+
+tcId = 289
+comment = 
+flags = Pseudorandom
+key = 172f22f2e59364dc418cd751dfa8444ae18644c0f9a2be84
+iv = bf9026d3ddaa37e7f180
+aad = 
+msg = 
+ct = 
+tag = b077ff4fad9ff4a94b6de8a66ba5b16c
+result = valid
+
+tcId = 290
+comment = 
+flags = Pseudorandom
+key = 143efbf8e0293dd4c13159cf260ec591f5f92bb3af8dd863
+iv = 111a95bbb60f9a3bba53
+aad = 51c14678c4544777
+msg = 
+ct = 
+tag = 099a7c5090443cd4000f970d42bcd1d5
+result = valid
+
+tcId = 291
+comment = 
+flags = Pseudorandom
+key = 4c41104d3f40265f9e35c320a01e7876c31400a0bd4d7092
+iv = 85fdc81afd9f4828177e
+aad = 
+msg = ba7cd07dfd8b5cf6ffd3ddb7635612c6
+ct = 386b634a5def89dc7302724ad11921fe
+tag = 4d792201a998889457b4c83cab0e5c35
+result = valid
+
+[ivSize = 88]
+[keySize = 192]
+[tagSize = 128]
+[type = AeadTest]
+
+tcId = 295
+comment = 
+flags = Pseudorandom
+key = 87c55b2f185f177faaf4b16d93af6dad477146345d0ea992
+iv = 0946c69953f4b952bc7c23
+aad = 
+msg = 
+ct = 
+tag = 257b3c597ecd1d67c3dd35dc70c68e48
+result = valid
+
+tcId = 296
+comment = 
+flags = Pseudorandom
+key = 8207e8d57dccdf5480f702c1fa72d0c6d02f1badc6fc08c5
+iv = c18e46a70c592980a2ccc2
+aad = bd2e2a9da32a9d67
+msg = 
+ct = 
+tag = 1145c20b7f31d57d458afc650a6d4590
+result = valid
+
+tcId = 297
+comment = 
+flags = Pseudorandom
+key = 2c2f7e8bb75ba931a711eca4d319e19ad89767248fee5360
+iv = 21a10456470d083ca7bd7c
+aad = 
+msg = 1e9f467441e487bf68d10be853b24479
+ct = 186b50f0edf7b523021384f5d8c09049
+tag = 8db01236b715a76432fcb02cff2f6ba6
+result = valid
+
+[ivSize = 104]
+[keySize = 192]
+[tagSize = 128]
+[type = AeadTest]
+
+tcId = 301
+comment = 
+flags = Pseudorandom
+key = d465544b5db9eb1c495cafaf5d9ac7e10faae74541a0a718
+iv = 9582afc30556ca12d154c42f03
+aad = 
+msg = 
+ct = 
+tag = 37f618f8bb7ff85ec644b1cbcca4c28a
+result = valid
+
+tcId = 302
+comment = 
+flags = Pseudorandom
+key = 6f1cce6a353aa45f926facbb6865d3598260db5390e937ad
+iv = ae0fe077398587747a642e5422
+aad = 326699f56ac28def
+msg = 
+ct = 
+tag = 07520b384cccbb80b9679a0ef48cb6a8
+result = valid
+
+tcId = 303
+comment = 
+flags = Pseudorandom
+key = 36f97a97d1dd67e5f83ccb529da25a604b68b8da904fe3f6
+iv = 2393a0a0e0b8efdd59db3436dc
+aad = 
+msg = c02f28773233ffca812eaf1c946cd8d1
+ct = d41286c461fb65d41066a10388eb69c8
+tag = 073696dffa2071440014dfac4c6cadb2
+result = valid
+
+[ivSize = 56]
+[keySize = 256]
+[tagSize = 128]
+[type = AeadTest]
+
+tcId = 307
+comment = 
+flags = Pseudorandom
+key = 491828f2dddcff5f966e6627f4b6a85a2ea76fd1e0b6117a13e94d0e81c063a5
+iv = 4feedf9d9c07e0
+aad = 
+msg = 
+ct = 
+tag = 1ca0a418f337a4c04f2123fefd31796d
+result = valid
+
+tcId = 308
+comment = 
+flags = Pseudorandom
+key = a57905b9eb31fbb1cc539639e670b2f1d12e277139b51a098cfebc1820fba1a4
+iv = 27cff76e28c613
+aad = dcd2f84ed0eafad0
+msg = 
+ct = 
+tag = 0b21f50e206c0721c6c059f9207e6d3a
+result = valid
+
+tcId = 309
+comment = 
+flags = Pseudorandom
+key = 55fa96eb3c945cab676c42b8caac34a1717d4337f4c90806b226d568121ec5e0
+iv = 209798006d012c
+aad = 
+msg = 34ef603e3c8f93a0e4a4773f7b57acea
+ct = 797ca05b20a149d42e5ab33835855b5c
+tag = 8191bd254a6e986e3c22e8106894d64f
+result = valid
+
+[ivSize = 64]
+[keySize = 256]
+[tagSize = 128]
+[type = AeadTest]
+
+tcId = 313
+comment = 
+flags = Pseudorandom
+key = 61ba694897925d1b4174d40401469c3ef267cdb9f829edb1a10618c16d666059
+iv = 0d10c5c84b88d688
+aad = 
+msg = 
+ct = 
+tag = 8ec71f7daf935edfac9de968f1d76477
+result = valid
+
+tcId = 314
+comment = 
+flags = Pseudorandom
+key = 30b784511193555f161123acad2f18ae3bde912ea9cc4a9e55316d822ece9652
+iv = 0f1d38c6f30b4475
+aad = d2cdd62280888fe5
+msg = 
+ct = 
+tag = 02fca41f06b8c5438084440ff4cea5c8
+result = valid
+
+tcId = 315
+comment = 
+flags = Pseudorandom
+key = 115884f693b155563e9bfb3b07cacb2f7f7caa9bfe51f89e23feb5a9468bfdd0
+iv = 04102199ef21e1df
+aad = 
+msg = 82e3e604d2be8fcab74f638d1e70f24c
+ct = 74c3b00322c091608037d4a8eb5afbec
+tag = a098b67a2c79dd939472a18502632701
+result = valid
+
+[ivSize = 72]
+[keySize = 256]
+[tagSize = 128]
+[type = AeadTest]
+
+tcId = 319
+comment = 
+flags = Pseudorandom
+key = 66f6d79b723ccd3136d2cf788fc5b1c2f4b98463a57ae4dd29f3888aba37d086
+iv = 0a0aab4230fc3ee8ca
+aad = 
+msg = 
+ct = 
+tag = 2e59d7b1d1ada4c5f4c74b3539668799
+result = valid
+
+tcId = 320
+comment = 
+flags = Pseudorandom
+key = df89e94e1979576eb86b4819c902aa5cddfd14e0224548c03531eaa79e9a2264
+iv = 39d912cc1cd3de7f18
+aad = fb1308e9082dba57
+msg = 
+ct = 
+tag = dd8b284b1ba718ff149b29c0be62e708
+result = valid
+
+tcId = 321
+comment = 
+flags = Pseudorandom
+key = 3e678307509ea31ed5f3be532ba61a4f03bc8e1375113641d10998b50d1e42e3
+iv = c0636667b331a08113
+aad = 
+msg = 320d0328d2164afcfb899265938bae67
+ct = 7c56071600b1a3c6d87a4ed8be56187a
+tag = 58c85126d5a5291b48a939556ca8f3d6
+result = valid
+
+[ivSize = 80]
+[keySize = 256]
+[tagSize = 128]
+[type = AeadTest]
+
+tcId = 325
+comment = 
+flags = Pseudorandom
+key = 44ab204d150adb17f83d1e5205b6e1419673fadee610fb9a38185a96741021eb
+iv = ff3914982be30b3b2112
+aad = 
+msg = 
+ct = 
+tag = f500cef310410d8940cf3490f5f3b5d7
+result = valid
+
+tcId = 326
+comment = 
+flags = Pseudorandom
+key = ddee6a7b131d31275ec1cb35654f9d25c394980a1dda37f70af0fb62dd77a9de
+iv = 06d84bae11708c428023
+aad = 04c1271ef52c041b
+msg = 
+ct = 
+tag = bac436ba985fdf3f14446b92ddf35dd1
+result = valid
+
+tcId = 327
+comment = 
+flags = Pseudorandom
+key = d3b44b8dfc3530404a63b3ca04cc71cfc71a5538448b2625c981856cb7daed0f
+iv = 7c3c42fa17347e1df797
+aad = 
+msg = 1d1775579656f7f6c6891401d733e2ab
+ct = 61d6deba72b41e9da6259fa805d77eb9
+tag = 513f5731bd000ce68a6eaadf3c92535a
+result = valid
+
+[ivSize = 88]
+[keySize = 256]
+[tagSize = 128]
+[type = AeadTest]
+
+tcId = 331
+comment = 
+flags = Pseudorandom
+key = 46948c6d69845499104d5dc2fae44880cfe7d0bcbcee57efc0133c266b6d2621
+iv = 05f715fd0a5603dd84af76
+aad = 
+msg = 
+ct = 
+tag = 11e678c0b260c5a3ea70f6a46e4ef436
+result = valid
+
+tcId = 332
+comment = 
+flags = Pseudorandom
+key = e689eb77a578399fa17a75083d25018ffbb68f24d77a029757541d6539bffbdf
+iv = 4a419618b2832de7a4f99b
+aad = ecf46eaca841769f
+msg = 
+ct = 
+tag = 4a2615d2d5f8e97b92743b0ef2f486ab
+result = valid
+
+tcId = 333
+comment = 
+flags = Pseudorandom
+key = aacb1336d6ee4d96a9a12e5b8f25f04800d4aaba55f379218d64edb3460fe215
+iv = 994c191e7a29c0efc1eb4d
+aad = 
+msg = 7bead5abccc876efb0109e412f06c751
+ct = 5aa31aa5eb103655b78c4f7bcf08c917
+tag = 64e41d31eb0df80adcee328f081c4aeb
+result = valid
+
+[ivSize = 104]
+[keySize = 256]
+[tagSize = 128]
+[type = AeadTest]
+
+tcId = 337
+comment = 
+flags = Pseudorandom
+key = a4994b65143536707b151ee6e79e69ab9c6d73000819fd2991dd28abede6b3e8
+iv = ac64444972d778d52f5531ae88
+aad = 
+msg = 
+ct = 
+tag = 8f3530c8adf86ebc6c4497cede15ccd9
+result = valid
+
+tcId = 338
+comment = 
+flags = Pseudorandom
+key = f99f2720f03ec3a9d0dad37e3a915bea3a11cba4bb0f60cd8f542b330163bcd0
+iv = 7e0f99a048b6e2879720fe4318
+aad = 94ba977e74455ed8
+msg = 
+ct = 
+tag = cdc3bef39ea53af680199e362609dc29
+result = valid
+
+tcId = 339
+comment = 
+flags = Pseudorandom
+key = 505b26d166a6ebd3db69cf12bee25b73651d0d332d0fb248b50ce9a1fb3a13f1
+iv = fb04f7bb3cd382cbc0893719aa
+aad = 
+msg = ae8bb1cbc92c73e73e59a0d7a9d7f528
+ct = 4335b708f27d1c1b4d6e985f18aba7c5
+tag = 069ee6f5279dab73593e11440d239eb8
+result = valid
+
+[ivSize = 96]
+[keySize = 128]
+[tagSize = 32]
+[type = AeadTest]
+
+tcId = 343
+comment = 
+flags = Pseudorandom
+key = 103e859d3a238724bf85b2100f442f1d
+iv = f91d64784161fabd6c962e50
+aad = 
+msg = 
+ct = 
+tag = 2b31c21b
+result = valid
+
+tcId = 344
+comment = 
+flags = Pseudorandom
+key = 71466dc3046b1e6c0838ba6c9ef41e79
+iv = 2928095bd7962e9e6024a2b9
+aad = a617cce74d0439900597cb3ddcfc25fb
+msg = 
+ct = 
+tag = 383f8abc
+result = valid
+
+tcId = 345
+comment = 
+flags = Pseudorandom
+key = 3cc93804e2d699619278a941389cec3c
+iv = c775dda314af64c310a7c1d3
+aad = 
+msg = 124ce71e08c1324f916570d533032919
+ct = f246754cd32a9960d3d5e5352f1d73c7
+tag = 60dbd676
+result = valid
+
+[ivSize = 96]
+[keySize = 128]
+[tagSize = 48]
+[type = AeadTest]
+
+tcId = 351
+comment = 
+flags = Pseudorandom
+key = 1a852b3456353cfd21726d1122109f1d
+iv = bde9165d65f301a2e4ff1d4a
+aad = 
+msg = 
+ct = 
+tag = bd22f7195c49
+result = valid
+
+tcId = 352
+comment = 
+flags = Pseudorandom
+key = 44b5298a677baff5c3a65d512a651992
+iv = cbb250283f75a66082f1a785
+aad = 19031c688ceee84e2d25253accbae68e
+msg = 
+ct = 
+tag = 9310ab0e0d1c
+result = valid
+
+tcId = 353
+comment = 
+flags = Pseudorandom
+key = 63c747be2f3069d50015f69dbae09876
+iv = bc2c940525e514409815ab19
+aad = 
+msg = ad5ca70a325363c34b2f3d5a8576b964
+ct = acb62f8c4781279d5c81ccaee4f61ebe
+tag = cbbca0326950
+result = valid
+
+[ivSize = 96]
+[keySize = 128]
+[tagSize = 64]
+[type = AeadTest]
+
+tcId = 359
+comment = 
+flags = Pseudorandom
+key = 5afb73f37d05147566a7ac9734eba3ff
+iv = 026dd125c98ef1507f6d1d15
+aad = 
+msg = 
+ct = 
+tag = a4c4b136625f0243
+result = valid
+
+tcId = 360
+comment = 
+flags = Pseudorandom
+key = 3cf938733cb76e433a5b5ccb06be3421
+iv = a5bc5bd383ce1108102c3c7b
+aad = befdff7313d33ca6398f84b32ef77c65
+msg = 
+ct = 
+tag = d665a6ea1ac4649a
+result = valid
+
+tcId = 361
+comment = 
+flags = Pseudorandom
+key = 22ed64b5b94a3c4116d02b4fbd4e5881
+iv = f498fd65dab234520de52920
+aad = 
+msg = 94b03b07772b70562bc729505b4ad426
+ct = 4c4dfe9711b320264f3a57ecdcd59850
+tag = b13aea2980767fd7
+result = valid
+
+[ivSize = 96]
+[keySize = 128]
+[tagSize = 80]
+[type = AeadTest]
+
+tcId = 367
+comment = 
+flags = Pseudorandom
+key = 1faf8005f77553f5ee26865e31f5087b
+iv = 40df77e537c895ab71464acc
+aad = 
+msg = 
+ct = 
+tag = 22ffed9c2dca19fa32ef
+result = valid
+
+tcId = 368
+comment = 
+flags = Pseudorandom
+key = f20c79f845bed406469cf1cd3f7daac5
+iv = f7bca66eccd7d494dec758f5
+aad = 6e4536575883925a929ced31ad8fb6dd
+msg = 
+ct = 
+tag = 2f25a1d00261589f3f00
+result = valid
+
+tcId = 369
+comment = 
+flags = Pseudorandom
+key = b8bae01260ced6194ef8df722d659be6
+iv = 71d10b7cbbbecb843e678ab5
+aad = 
+msg = 387c0324cd47d3f22cc9d968a72e434d
+ct = 0c36e303e295a289bb134740e21a6664
+tag = d3587e2186553fd9d409
+result = valid
+
+[ivSize = 96]
+[keySize = 128]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 375
+comment = 
+flags = Pseudorandom
+key = 0ad9da994db2ed7b9e35e98895194c4b
+iv = 57e364c16b3689bc156b3115
+aad = 
+msg = 
+ct = 
+tag = 73586eab8ced7540620fea72
+result = valid
+
+tcId = 376
+comment = 
+flags = Pseudorandom
+key = 970495f70dc64f0fe4e8c10946df2ed1
+iv = 69b1a3195c165517fed66595
+aad = bfe8736a2113f774c6828e5b930f1cb9
+msg = 
+ct = 
+tag = 18d7c54f8fcbec442b313987
+result = valid
+
+tcId = 377
+comment = 
+flags = Pseudorandom
+key = f363f1a7d33c96949fd08f440cfba000
+iv = 67b92007f57b83fd9f3ee6fa
+aad = 
+msg = a651d2ca4b16980b0e4a7a10c75c47ed
+ct = 20c2a2f18d0753acd36e204985149528
+tag = 4a4422d3b99c8d77dbde2ab2
+result = valid
+
+[ivSize = 96]
+[keySize = 128]
+[tagSize = 112]
+[type = AeadTest]
+
+tcId = 383
+comment = 
+flags = Pseudorandom
+key = f21f0700f16aa098d6617cc3683012c1
+iv = 42394a30fcd252556bf2cb36
+aad = 
+msg = 
+ct = 
+tag = 39d0703dcf7d0c316222d716afec
+result = valid
+
+tcId = 384
+comment = 
+flags = Pseudorandom
+key = 7d2827739ad3ce2dc7f27e35f6cd837f
+iv = 09a249077db1f84e984a9829
+aad = b5e59d8c3f81dae7789a826a0d3200f9
+msg = 
+ct = 
+tag = 45553d58839d45a377be85e95a41
+result = valid
+
+tcId = 385
+comment = 
+flags = Pseudorandom
+key = 1e70de0cba8f8848dbc8dd9cfa53c161
+iv = d4e677bdb04bf935d130ce15
+aad = 
+msg = 7102b7710b1db1a0748474f8e37b6dd8
+ct = 55dfe0e88c81bfc561975dfabaa21a12
+tag = 024e3bf1985a7f7eccdaa0ee2a18
+result = valid
+
+[ivSize = 96]
+[keySize = 192]
+[tagSize = 32]
+[type = AeadTest]
+
+tcId = 391
+comment = 
+flags = Pseudorandom
+key = 85e017fbc86056c8c18915b369c0c92dd3af3fc677782f8c
+iv = 3d57511eaffbe4e9e90d6ec3
+aad = 
+msg = 
+ct = 
+tag = 4fc4192c
+result = valid
+
+tcId = 392
+comment = 
+flags = Pseudorandom
+key = 0df97ba40e5f24cd5f1bd0ecf474ac9a4a8b4cf138806549
+iv = 705bc1a6cb54c143d4fa1002
+aad = dff5cad8f5b6cc65df4e4e12802bd0e6
+msg = 
+ct = 
+tag = 48ded01f
+result = valid
+
+tcId = 393
+comment = 
+flags = Pseudorandom
+key = 795063248c619c9ce61b56c17db6c023fab12ca61031925c
+iv = d3aa2dfb019b56467fdb368b
+aad = 
+msg = 017e690c0069bf92d69f270d32af15ef
+ct = 3bf24b2ada604ad0ad9fa538e3b4e38a
+tag = 84d2cf30
+result = valid
+
+[ivSize = 96]
+[keySize = 192]
+[tagSize = 48]
+[type = AeadTest]
+
+tcId = 399
+comment = 
+flags = Pseudorandom
+key = 21acb09bb48dc6417e4d87a3168fcb84e31950519331db93
+iv = 5d3e03633746d3729b609dd1
+aad = 
+msg = 
+ct = 
+tag = 40d04296cf7e
+result = valid
+
+tcId = 400
+comment = 
+flags = Pseudorandom
+key = eb470c2be6b32575c42cf90853bdbed1e6412cae1615330f
+iv = 9ed746015ad72f1f4a868837
+aad = e8154fb503cba66491a7a9ad2f310282
+msg = 
+ct = 
+tag = 8d8f8d3946b8
+result = valid
+
+tcId = 401
+comment = 
+flags = Pseudorandom
+key = b7858c86b35519e9c428624c41f4da8379d0f855b3dcd622
+iv = d6cba35f0278d667d93d43e3
+aad = 
+msg = 77ae655c3d5f9a6ec06ccec714827d87
+ct = d674d83e1121be226bd73355dd33657e
+tag = 5782105b45bd
+result = valid
+
+[ivSize = 96]
+[keySize = 192]
+[tagSize = 64]
+[type = AeadTest]
+
+tcId = 407
+comment = 
+flags = Pseudorandom
+key = 5c049b3edd2b926fcd3434c421532b7e7908712a85057226
+iv = b2b793469d4ac1dfc3756c8f
+aad = 
+msg = 
+ct = 
+tag = c27816bb97e98d11
+result = valid
+
+tcId = 408
+comment = 
+flags = Pseudorandom
+key = 5b04c342efd5e89aa5d38ef32eedeaf2ac035f43b9b4201d
+iv = 14d4781e21592efc4409b944
+aad = 3fd3b691d0511d71f5dbec4f1320fc8c
+msg = 
+ct = 
+tag = 2f84ac2d50bef75e
+result = valid
+
+tcId = 409
+comment = 
+flags = Pseudorandom
+key = 1a2f9213e66c969306b98ce33d32ca9126e76578355a67ab
+iv = 6edae628133c510f0096585a
+aad = 
+msg = d4a9427012403f9c518c7b2360ce0ab3
+ct = 92bd38e1fdfa1175dc230be5f541760b
+tag = 9902e9da26908295
+result = valid
+
+[ivSize = 96]
+[keySize = 192]
+[tagSize = 80]
+[type = AeadTest]
+
+tcId = 415
+comment = 
+flags = Pseudorandom
+key = 89c4e797062e49ad02d2bcf2eb0ff65fc17cd29cd55c8bbf
+iv = 68de7404e6d137a583890b0f
+aad = 
+msg = 
+ct = 
+tag = ba50e04ef887145562f1
+result = valid
+
+tcId = 416
+comment = 
+flags = Pseudorandom
+key = c9b9280380276a99c7e8b00b03a0ac359366a925532c4b08
+iv = 3d697592a78007ee3fc9f871
+aad = 566fced9a24e20ae055f034de89f762a
+msg = 
+ct = 
+tag = 7e43c945a8826a9f7164
+result = valid
+
+tcId = 417
+comment = 
+flags = Pseudorandom
+key = 19904bd0b544a29e2c0a305a124323a1de6faeb71bdd0f87
+iv = 1d15b87dfe88c831b10545aa
+aad = 
+msg = a6896e2578689e31d305f3ce21415ffd
+ct = bcbd194382f521498c930f052f81f5c5
+tag = ca50c7a2d0e39a642e92
+result = valid
+
+[ivSize = 96]
+[keySize = 192]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 423
+comment = 
+flags = Pseudorandom
+key = 08711372dbacacbb68ef12e5ef59b69fd46c9be4c2fb8324
+iv = 8321748412380b0e7b14a7ef
+aad = 
+msg = 
+ct = 
+tag = 6c1ee8d9718f724ce8d96beb
+result = valid
+
+tcId = 424
+comment = 
+flags = Pseudorandom
+key = 0a12326b7efac179421fdbced80d52f2407e993ef50477f9
+iv = 34472131547840263d9e9fd3
+aad = 17be4bb1e4a40fac706879381a2d6f47
+msg = 
+ct = 
+tag = 6fb72e3768832a7bab907a75
+result = valid
+
+tcId = 425
+comment = 
+flags = Pseudorandom
+key = 56d5f5eb697d96fa9c11528b191eafc4159c2cb2902f0695
+iv = 8e04df7913429299cf2f2337
+aad = 
+msg = 9f6edafc71ef1561d7005a533a5cdeb5
+ct = 536142d27a0312b80e53ff32be189e29
+tag = f16a364c64229fab13908761
+result = valid
+
+[ivSize = 96]
+[keySize = 192]
+[tagSize = 112]
+[type = AeadTest]
+
+tcId = 431
+comment = 
+flags = Pseudorandom
+key = cd2adc91b19d564babc97e12037c8bc91af687f959dae1d4
+iv = 678b89fdf4e135dd67e3f28f
+aad = 
+msg = 
+ct = 
+tag = a75407b62989f1be04131a43ce16
+result = valid
+
+tcId = 432
+comment = 
+flags = Pseudorandom
+key = 59b4b1816f2a9fb6266a39af3e497e2b89b1fa51fcb965ef
+iv = 9905979f5b03a50d5440aa08
+aad = e82cb113397277e220052ac55304d793
+msg = 
+ct = 
+tag = 67f6e8c4465bb647c03ef4fc5f1d
+result = valid
+
+tcId = 433
+comment = 
+flags = Pseudorandom
+key = 2de7b9837d63f531db2705c5e2c800afbf5ccef73b80f79d
+iv = 1a0ce3a2e9283d069285416c
+aad = 
+msg = c1265183d4095fbea0bfa35b2781d52a
+ct = 340b2fd7c39bba1a1a9391b6010ef8b4
+tag = 99b19c91eb2312ff5c42bd889068
+result = valid
+
+[ivSize = 96]
+[keySize = 256]
+[tagSize = 32]
+[type = AeadTest]
+
+tcId = 439
+comment = 
+flags = Pseudorandom
+key = 9948edf5cfb2f53363ed83bfb15e7cb502f0628dc9f2b87223f22334c40b8923
+iv = 44e154e9b3f7fd47a97fc7be
+aad = 
+msg = 
+ct = 
+tag = 92a59922
+result = valid
+
+tcId = 440
+comment = 
+flags = Pseudorandom
+key = 93b75ac129ec195f8c180e9b91dfedaae2b2facdc15593b3e4258c78d2ff94d7
+iv = db535fe723ba650b66d230fb
+aad = 7b3dd420607139c19c6db7a4efe09a0b
+msg = 
+ct = 
+tag = 50e42c1f
+result = valid
+
+tcId = 441
+comment = 
+flags = Pseudorandom
+key = c7679145a15e53db5cd6166143a9fefe6746715f5d84d9dfa604f1d3dc337e6c
+iv = 6ac0d6aa446e86ff32f8fc76
+aad = 
+msg = 83b08305526fbcbcdeebb3d7a8ac44f5
+ct = dcb5250559a03c8e70e5c0107121cf58
+tag = 0081c1fd
+result = valid
+
+[ivSize = 96]
+[keySize = 256]
+[tagSize = 48]
+[type = AeadTest]
+
+tcId = 447
+comment = 
+flags = Pseudorandom
+key = f162c319c6cff093d5956aeede3701181942888211087824817827a432f86d9f
+iv = 69d742d94fee251140e6d779
+aad = 
+msg = 
+ct = 
+tag = fcdc5aa33914
+result = valid
+
+tcId = 448
+comment = 
+flags = Pseudorandom
+key = eddccd5eda6eaf421bbf87d919549c1f3ac2045c0ac2bcc2efa50ec84050b36e
+iv = 30f3db312e76d29345edde59
+aad = 078e76ef2deebdd8f2d549089f4a93e3
+msg = 
+ct = 
+tag = 0df6d2dc83df
+result = valid
+
+tcId = 449
+comment = 
+flags = Pseudorandom
+key = 1c9b20e64ad783bf04f801be532f6b088e004d3aa2d72d77f39ec8fe9ddc5189
+iv = 497fa41df30858e3fbb36a68
+aad = 
+msg = 03d33c0a11a6cda99d76e98f75059fbf
+ct = deea99437d385b211f3debda65869daa
+tag = 818ea963042c
+result = valid
+
+[ivSize = 96]
+[keySize = 256]
+[tagSize = 64]
+[type = AeadTest]
+
+tcId = 455
+comment = 
+flags = Pseudorandom
+key = d2a41cd9ce5e917d16b9ab55819ef8501e06aa78ef132fd3ebe6fecd91beb39b
+iv = f71bf6bc21c6d6354e4b4cdf
+aad = 
+msg = 
+ct = 
+tag = 23928a009d21a10f
+result = valid
+
+tcId = 456
+comment = 
+flags = Pseudorandom
+key = 882107ab29053d4b44c87b5bb94937211c20528da9ac490f6c574caecdcd2f17
+iv = e6a13537bb7f2af749b31823
+aad = e9ee32e6f197e40204682dac42dd4c75
+msg = 
+ct = 
+tag = 5773c725f2f94617
+result = valid
+
+tcId = 457
+comment = 
+flags = Pseudorandom
+key = b967091c98bb64922430833d1b553326b8e91b6ef7141971cc8e8cc5f6ef6170
+iv = a5dd076d8a9dc3d7ec43d04f
+aad = 
+msg = c8a331b554e6c7b0783c53fee6f1618e
+ct = 99b5c22225e5325f9aa9599a34deec59
+tag = e9c93619d33d268d
+result = valid
+
+[ivSize = 96]
+[keySize = 256]
+[tagSize = 80]
+[type = AeadTest]
+
+tcId = 463
+comment = 
+flags = Pseudorandom
+key = a0917ebe151778cb88bb2e356169ad1a4b9ebe2bcc2a352bc789a50b4f312d3e
+iv = 32811354382608bd076d8a87
+aad = 
+msg = 
+ct = 
+tag = b41d1dafd0d25931d285
+result = valid
+
+tcId = 464
+comment = 
+flags = Pseudorandom
+key = aa8a48f8b6d18634ec96338e820f7eb9f0fea8864bb927a57c65f8344990199b
+iv = a0f7304648f97a3034916d35
+aad = f4abe30815ce6ae9cf2f4eaa8bd004cb
+msg = 
+ct = 
+tag = f7605f5201936da16d39
+result = valid
+
+tcId = 465
+comment = 
+flags = Pseudorandom
+key = 8ab50516b053a3ed51b9f84f76dbf930bde2b55aa499a016194350461ff0c708
+iv = 140a72ad89b2fa23c385e804
+aad = 
+msg = 536b9006a41febbe7a10d16ae2b64488
+ct = f1ed6667a21887a394d816a45ae06a5d
+tag = 4555c71614a765c6a8fc
+result = valid
+
+[ivSize = 96]
+[keySize = 256]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 471
+comment = 
+flags = Pseudorandom
+key = 0737424e0c2f4048638133a18d676dc1d83a233877613acc0eb5a681305366c0
+iv = f028d0ecf26c312b9f623395
+aad = 
+msg = 
+ct = 
+tag = d37f07c4ecef1fcaf0fe444a
+result = valid
+
+tcId = 472
+comment = 
+flags = Pseudorandom
+key = 8e4c13c982a06f3a982959eb7c2e9f0e41a8e054360e5b93111bc6d93970ee8d
+iv = 8c081eb60fa0903595713a73
+aad = 24f1ed7cad53546802e2e5f5ed516247
+msg = 
+ct = 
+tag = 97fed410c9fdb06bcdb38585
+result = valid
+
+tcId = 473
+comment = 
+flags = Pseudorandom
+key = 627ffd55176d6555da82b4eb87e6519044b881334c95789d670729af0584128b
+iv = c15cb8abce008f015e2715ae
+aad = 
+msg = 000224e63d99e8b1a0a2abb4b45bca15
+ct = 59a1b95522e96a5fea0ae77d179223ec
+tag = aab2f34de6e5bac7ccf93618
+result = valid
+
+[ivSize = 96]
+[keySize = 256]
+[tagSize = 112]
+[type = AeadTest]
+
+tcId = 479
+comment = 
+flags = Pseudorandom
+key = 08f5fe4c8f6393accdcb560a3c271096ff0d9d67438fffd34df718652c6b8efe
+iv = 25c5f84fe6ec3c2f7c1b7cc5
+aad = 
+msg = 
+ct = 
+tag = 66b23023e608cd9391567aa85f5a
+result = valid
+
+tcId = 480
+comment = 
+flags = Pseudorandom
+key = 8495298b9c208e6c5b234e856eecff6a114cd8b3aeeeb745a160ffa3305cf5ef
+iv = cce02635c3771fb5b673f88c
+aad = cc9af3cca9f3c2c1211b23581ec5fdd1
+msg = 
+ct = 
+tag = 0d34896c64b6787da0ac7c03fa93
+result = valid
+
+tcId = 481
+comment = 
+flags = Pseudorandom
+key = 4f49655c76a629e58cfb94c851a91510c2f128dc4bce1f1f11c3dc99436d268c
+iv = 967fde29671d4654f9f670c0
+aad = 
+msg = b4d12c3edf3802e21f624b718b63fd6c
+ct = 3ba4e2a4507c0b6f5ae1be29c30b25e9
+tag = 8cefa2495473eee1b22c3fa6ef12
+result = valid
+
+[ivSize = 0]
+[keySize = 128]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 487
+comment = Invalid nonce size
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f
+iv = 
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = be1722a5817195c503814be1bd093110
+tag = 6f79a8cf92c856b8f16dee92
+result = invalid
+
+[ivSize = 8]
+[keySize = 128]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 488
+comment = Invalid nonce size
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f
+iv = 40
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 210389226958def4b44f1e168632113c
+tag = d4e97a100800a5c16bea4fdf
+result = invalid
+
+[ivSize = 16]
+[keySize = 128]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 489
+comment = Invalid nonce size
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f
+iv = 4041
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 95bf208e8673b9f9a38f9609b5e78f2a
+tag = df814191696cf3129fb40dc0
+result = invalid
+
+[ivSize = 32]
+[keySize = 128]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 490
+comment = Invalid nonce size
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f
+iv = 40414243
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = a7dab4bfcf3e2afa4b319cfdc17f15f1
+tag = c4e8b1fa0d791777417ce52c
+result = invalid
+
+[ivSize = 48]
+[keySize = 128]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 491
+comment = Invalid nonce size
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f
+iv = 404142434445
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = a89a23f4f32ba009c3aa8fa0191f84c5
+tag = 659621c2ad5bc61de2ce8046
+result = invalid
+
+[ivSize = 112]
+[keySize = 128]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 492
+comment = Invalid nonce size
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f
+iv = 404142434445464748494a4b4c4d
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = f9d0078bcd568bf97924e6d71f406087
+tag = 095c0da2ea6dda5a87121c2a
+result = invalid
+
+[ivSize = 120]
+[keySize = 128]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 493
+comment = Invalid nonce size
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f
+iv = 404142434445464748494a4b4c4d4e
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 670cd068e65b08fcefb9c0afa7bb5c33
+tag = 665b5b969f4213c7f97ffe25
+result = invalid
+
+[ivSize = 128]
+[keySize = 128]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 494
+comment = Nonce is too long
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f
+iv = 202122232425262728292a2b2c2d2e2f
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 5edbebec6c533dac8ca89faf60d8c137
+tag = af0057abe5acf1cd47c7b5b3
+result = invalid
+
+[ivSize = 160]
+[keySize = 128]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 495
+comment = Nonce is too long
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f
+iv = 202122232425262728292a2b2c2d2e2f30313233
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 5edbebec6c533dac8ca89faf60d8c137
+tag = af0057abe5acf1cd47c7b5b3
+result = invalid
+
+[ivSize = 256]
+[keySize = 128]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 496
+comment = Nonce is too long
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f
+iv = 202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 5edbebec6c533dac8ca89faf60d8c137
+tag = af0057abe5acf1cd47c7b5b3
+result = invalid
+
+[ivSize = 512]
+[keySize = 128]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 497
+comment = Very long nonce
+flags = CVE-2017-18330,InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f
+iv = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = c32a7643ab0f6ea3458d7e63b0ed6499
+tag = a0751a1a704e34f8b04f77bd
+result = invalid
+
+[ivSize = 1024]
+[keySize = 128]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 498
+comment = Very long nonce
+flags = CVE-2017-18330,InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f
+iv = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f404142434445464748494a4b4c4d4e4f505152535455565758595a5b5c5d5e5f606162636465666768696a6b6c6d6e6f707172737475767778797a7b7c7d7e7f
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = c32a7643ab0f6ea3458d7e63b0ed6499
+tag = a0751a1a704e34f8b04f77bd
+result = invalid
+
+[ivSize = 2144]
+[keySize = 128]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 499
+comment = Very long nonce
+flags = CVE-2017-18330,InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f
+iv = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f404142434445464748494a4b4c4d4e4f505152535455565758595a5b5c5d5e5f606162636465666768696a6b6c6d6e6f707172737475767778797a7b7c7d7e7f808182838485868788898a8b8c8d8e8f909192939495969798999a9b9c9d9e9fa0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbebfc0c1c2c3c4c5c6c7c8c9cacbcccdcecfd0d1d2d3d4d5d6d7d8d9dadbdcdddedfe0e1e2e3e4e5e6e7e8e9eaebecedeeeff0f1f2f3f4f5f6f7f8f9fafbfcfdfeff000102030405060708090a0b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = c32a7643ab0f6ea3458d7e63b0ed6499
+tag = a0751a1a704e34f8b04f77bd
+result = invalid
+
+[ivSize = 0]
+[keySize = 192]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 500
+comment = Invalid nonce size
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 15699c20198688b9e4882a6542811ada
+tag = c69317b99b43086b621eb14a
+result = invalid
+
+[ivSize = 8]
+[keySize = 192]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 501
+comment = Invalid nonce size
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 40
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 7e84b5aa41d2212b3a5d730df5b20eaa
+tag = 5924d8bd85318b033bf4f2fd
+result = invalid
+
+[ivSize = 16]
+[keySize = 192]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 502
+comment = Invalid nonce size
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 4041
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = eb813367e3d1fa4ee4c402450f2946d1
+tag = cf6eee495f94c08fef7ce5b5
+result = invalid
+
+[ivSize = 32]
+[keySize = 192]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 503
+comment = Invalid nonce size
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 40414243
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3be9c621dbe057b86acaef8ad0e38ee0
+tag = 6dd33d42278bb2f27eab7a0b
+result = invalid
+
+[ivSize = 48]
+[keySize = 192]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 504
+comment = Invalid nonce size
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 404142434445
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 41bd6e626ef1d4fa33e3e62b6b71b247
+tag = b03506df38085e4f93ee9ea4
+result = invalid
+
+[ivSize = 112]
+[keySize = 192]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 505
+comment = Invalid nonce size
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 404142434445464748494a4b4c4d
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 390f24acc113b433e4b785e9183d4838
+tag = 9bc0397fee59e6990c3bbc81
+result = invalid
+
+[ivSize = 120]
+[keySize = 192]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 506
+comment = Invalid nonce size
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 404142434445464748494a4b4c4d4e
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = b2d108590625ee4af66b7cb663df50c1
+tag = 752d9464f3370a06a8f462d9
+result = invalid
+
+[ivSize = 128]
+[keySize = 192]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 507
+comment = Nonce is too long
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 202122232425262728292a2b2c2d2e2f
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 17ef53d925bba4e1f335d00186b7c38e
+tag = 0c6f62710cf76b745ccb41e2
+result = invalid
+
+[ivSize = 160]
+[keySize = 192]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 508
+comment = Nonce is too long
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 202122232425262728292a2b2c2d2e2f30313233
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 17ef53d925bba4e1f335d00186b7c38e
+tag = 0c6f62710cf76b745ccb41e2
+result = invalid
+
+[ivSize = 256]
+[keySize = 192]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 509
+comment = Nonce is too long
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 17ef53d925bba4e1f335d00186b7c38e
+tag = 0c6f62710cf76b745ccb41e2
+result = invalid
+
+[ivSize = 512]
+[keySize = 192]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 510
+comment = Very long nonce
+flags = CVE-2017-18330,InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 81a8a087cf96d58f64868b189edd0bb4
+tag = 124ff3aa524e5d5cc44bf743
+result = invalid
+
+[ivSize = 1024]
+[keySize = 192]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 511
+comment = Very long nonce
+flags = CVE-2017-18330,InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f404142434445464748494a4b4c4d4e4f505152535455565758595a5b5c5d5e5f606162636465666768696a6b6c6d6e6f707172737475767778797a7b7c7d7e7f
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 81a8a087cf96d58f64868b189edd0bb4
+tag = 124ff3aa524e5d5cc44bf743
+result = invalid
+
+[ivSize = 2144]
+[keySize = 192]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 512
+comment = Very long nonce
+flags = CVE-2017-18330,InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f404142434445464748494a4b4c4d4e4f505152535455565758595a5b5c5d5e5f606162636465666768696a6b6c6d6e6f707172737475767778797a7b7c7d7e7f808182838485868788898a8b8c8d8e8f909192939495969798999a9b9c9d9e9fa0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbebfc0c1c2c3c4c5c6c7c8c9cacbcccdcecfd0d1d2d3d4d5d6d7d8d9dadbdcdddedfe0e1e2e3e4e5e6e7e8e9eaebecedeeeff0f1f2f3f4f5f6f7f8f9fafbfcfdfeff000102030405060708090a0b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 81a8a087cf96d58f64868b189edd0bb4
+tag = 124ff3aa524e5d5cc44bf743
+result = invalid
+
+[ivSize = 0]
+[keySize = 256]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 513
+comment = Invalid nonce size
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3cd9bace5f5dc77c89c2bc139065e797
+tag = 99f6058eeb8e3a8036aadab8
+result = invalid
+
+[ivSize = 8]
+[keySize = 256]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 514
+comment = Invalid nonce size
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 40
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = b5f044211e18b13572e2ea70ed178353
+tag = 24cf3f3f369b692fe730970c
+result = invalid
+
+[ivSize = 16]
+[keySize = 256]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 515
+comment = Invalid nonce size
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 4041
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = c000746ed8246d20edda90c04f380ba8
+tag = af82093487d3a5d4872ff9e2
+result = invalid
+
+[ivSize = 32]
+[keySize = 256]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 516
+comment = Invalid nonce size
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 40414243
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = b00bd7b8cd031c168e37407eb09f062e
+tag = bfcae110c737bbe757967f4e
+result = invalid
+
+[ivSize = 48]
+[keySize = 256]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 517
+comment = Invalid nonce size
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 404142434445
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = ae2865f86ba6328ce131a49cd499f936
+tag = 4390b54f3b7cbf9e54a22048
+result = invalid
+
+[ivSize = 112]
+[keySize = 256]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 518
+comment = Invalid nonce size
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 404142434445464748494a4b4c4d
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 5680ebd16ae446e9e2d07fbaac7abd0b
+tag = d72d015782fd94d76d2f682f
+result = invalid
+
+[ivSize = 120]
+[keySize = 256]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 519
+comment = Invalid nonce size
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 404142434445464748494a4b4c4d4e
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 6a611e6fb67d831b4b096169f2e86647
+tag = 35a5f3927e44801e12293291
+result = invalid
+
+[ivSize = 128]
+[keySize = 256]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 520
+comment = Nonce is too long
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 202122232425262728292a2b2c2d2e2f
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 681841a0a013923907c669efd3ffd069
+tag = 20cae9276de71cd60bcb1f3c
+result = invalid
+
+[ivSize = 160]
+[keySize = 256]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 521
+comment = Nonce is too long
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 202122232425262728292a2b2c2d2e2f30313233
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 681841a0a013923907c669efd3ffd069
+tag = 20cae9276de71cd60bcb1f3c
+result = invalid
+
+[ivSize = 256]
+[keySize = 256]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 522
+comment = Nonce is too long
+flags = InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 681841a0a013923907c669efd3ffd069
+tag = 20cae9276de71cd60bcb1f3c
+result = invalid
+
+[ivSize = 512]
+[keySize = 256]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 523
+comment = Very long nonce
+flags = CVE-2017-18330,InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = e73cc2ee050a0e7b345aeb1000c481c3
+tag = b30e8a0100aecf17ec951839
+result = invalid
+
+[ivSize = 1024]
+[keySize = 256]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 524
+comment = Very long nonce
+flags = CVE-2017-18330,InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f404142434445464748494a4b4c4d4e4f505152535455565758595a5b5c5d5e5f606162636465666768696a6b6c6d6e6f707172737475767778797a7b7c7d7e7f
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = e73cc2ee050a0e7b345aeb1000c481c3
+tag = b30e8a0100aecf17ec951839
+result = invalid
+
+[ivSize = 2144]
+[keySize = 256]
+[tagSize = 96]
+[type = AeadTest]
+
+tcId = 525
+comment = Very long nonce
+flags = CVE-2017-18330,InvalidNonceSize
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f404142434445464748494a4b4c4d4e4f505152535455565758595a5b5c5d5e5f606162636465666768696a6b6c6d6e6f707172737475767778797a7b7c7d7e7f808182838485868788898a8b8c8d8e8f909192939495969798999a9b9c9d9e9fa0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbebfc0c1c2c3c4c5c6c7c8c9cacbcccdcecfd0d1d2d3d4d5d6d7d8d9dadbdcdddedfe0e1e2e3e4e5e6e7e8e9eaebecedeeeff0f1f2f3f4f5f6f7f8f9fafbfcfdfeff000102030405060708090a0b
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = e73cc2ee050a0e7b345aeb1000c481c3
+tag = b30e8a0100aecf17ec951839
+result = invalid
+
+[ivSize = 96]
+[keySize = 128]
+[tagSize = 16]
+[type = AeadTest]
+
+tcId = 526
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = d3dab1ee494cc229099d6cac7df14add
+tag = 198c
+result = invalid
+
+tcId = 527
+comment = Invalid tag size
+flags = InsecureTagSize
+key = 000102030405060708090a0b0c0d0e0f
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 
+ct = 
+tag = 0000
+result = invalid
+
+[ivSize = 96]
+[keySize = 128]
+[tagSize = 24]
+[type = AeadTest]
+
+tcId = 528
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = d3dab1ee494cc229099d6cac7df14add
+tag = 198c08
+result = invalid
+
+[ivSize = 96]
+[keySize = 128]
+[tagSize = 40]
+[type = AeadTest]
+
+tcId = 529
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = d3dab1ee494cc229099d6cac7df14add
+tag = 231a2d8f6a
+result = invalid
+
+[ivSize = 96]
+[keySize = 128]
+[tagSize = 56]
+[type = AeadTest]
+
+tcId = 530
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = d3dab1ee494cc229099d6cac7df14add
+tag = b1bbf3883507cd
+result = invalid
+
+[ivSize = 96]
+[keySize = 128]
+[tagSize = 72]
+[type = AeadTest]
+
+tcId = 531
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = d3dab1ee494cc229099d6cac7df14add
+tag = cd0ae63f3a30f7fb5b
+result = invalid
+
+[ivSize = 96]
+[keySize = 128]
+[tagSize = 88]
+[type = AeadTest]
+
+tcId = 532
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = d3dab1ee494cc229099d6cac7df14add
+tag = 535e32ac416816615e5a20
+result = invalid
+
+[ivSize = 96]
+[keySize = 128]
+[tagSize = 104]
+[type = AeadTest]
+
+tcId = 533
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = d3dab1ee494cc229099d6cac7df14add
+tag = a6c58458d3969da9cb0849f95e
+result = invalid
+
+[ivSize = 96]
+[keySize = 128]
+[tagSize = 120]
+[type = AeadTest]
+
+tcId = 534
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = d3dab1ee494cc229099d6cac7df14add
+tag = f7879fb7fe88dd74cb8e96fda1d2eb
+result = invalid
+
+[ivSize = 96]
+[keySize = 192]
+[tagSize = 16]
+[type = AeadTest]
+
+tcId = 535
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 1c49324515a346d424eed6fed9bddc17
+tag = 95eb
+result = invalid
+
+tcId = 536
+comment = Invalid tag size
+flags = InsecureTagSize
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 
+ct = 
+tag = 0000
+result = invalid
+
+[ivSize = 96]
+[keySize = 192]
+[tagSize = 24]
+[type = AeadTest]
+
+tcId = 537
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 1c49324515a346d424eed6fed9bddc17
+tag = 95eb98
+result = invalid
+
+[ivSize = 96]
+[keySize = 192]
+[tagSize = 40]
+[type = AeadTest]
+
+tcId = 538
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 1c49324515a346d424eed6fed9bddc17
+tag = 3fd40dd8e0
+result = invalid
+
+[ivSize = 96]
+[keySize = 192]
+[tagSize = 56]
+[type = AeadTest]
+
+tcId = 539
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 1c49324515a346d424eed6fed9bddc17
+tag = 793ca5d351e68c
+result = invalid
+
+[ivSize = 96]
+[keySize = 192]
+[tagSize = 72]
+[type = AeadTest]
+
+tcId = 540
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 1c49324515a346d424eed6fed9bddc17
+tag = 63a0987ffff1313caa
+result = invalid
+
+[ivSize = 96]
+[keySize = 192]
+[tagSize = 88]
+[type = AeadTest]
+
+tcId = 541
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 1c49324515a346d424eed6fed9bddc17
+tag = 0ee40f14475b7e28752983
+result = invalid
+
+[ivSize = 96]
+[keySize = 192]
+[tagSize = 104]
+[type = AeadTest]
+
+tcId = 542
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 1c49324515a346d424eed6fed9bddc17
+tag = 40a4fc82d429a0091c962d7152
+result = invalid
+
+[ivSize = 96]
+[keySize = 192]
+[tagSize = 120]
+[type = AeadTest]
+
+tcId = 543
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f1011121314151617
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 1c49324515a346d424eed6fed9bddc17
+tag = f8f9bdc6b8506afd3ae54a0a67e185
+result = invalid
+
+[ivSize = 96]
+[keySize = 256]
+[tagSize = 16]
+[type = AeadTest]
+
+tcId = 544
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3b6829d5deb47ca9f10abf481564aee1
+tag = 8f8b
+result = invalid
+
+tcId = 545
+comment = Invalid tag size
+flags = InsecureTagSize
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 
+ct = 
+tag = 0000
+result = invalid
+
+[ivSize = 96]
+[keySize = 256]
+[tagSize = 24]
+[type = AeadTest]
+
+tcId = 546
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3b6829d5deb47ca9f10abf481564aee1
+tag = 8f8b32
+result = invalid
+
+[ivSize = 96]
+[keySize = 256]
+[tagSize = 40]
+[type = AeadTest]
+
+tcId = 547
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3b6829d5deb47ca9f10abf481564aee1
+tag = a94e19f34c
+result = invalid
+
+[ivSize = 96]
+[keySize = 256]
+[tagSize = 56]
+[type = AeadTest]
+
+tcId = 548
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3b6829d5deb47ca9f10abf481564aee1
+tag = 5e90218caca470
+result = invalid
+
+[ivSize = 96]
+[keySize = 256]
+[tagSize = 72]
+[type = AeadTest]
+
+tcId = 549
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3b6829d5deb47ca9f10abf481564aee1
+tag = 385cef2c2599faa960
+result = invalid
+
+[ivSize = 96]
+[keySize = 256]
+[tagSize = 88]
+[type = AeadTest]
+
+tcId = 550
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3b6829d5deb47ca9f10abf481564aee1
+tag = e81c270020edd93ba7e564
+result = invalid
+
+[ivSize = 96]
+[keySize = 256]
+[tagSize = 104]
+[type = AeadTest]
+
+tcId = 551
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3b6829d5deb47ca9f10abf481564aee1
+tag = c5d5f29af5c0db444ac2618b9d
+result = invalid
+
+[ivSize = 96]
+[keySize = 256]
+[tagSize = 120]
+[type = AeadTest]
+
+tcId = 552
+comment = Invalid tag size
+flags = InvalidTagSize
+key = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+iv = 464748494a4b4c4d4e4f5051
+aad = 
+msg = 202122232425262728292a2b2c2d2e2f
+ct = 3b6829d5deb47ca9f10abf481564aee1
+tag = f2f6d8b6ab69c8e10039b5754f5537
+result = invalid

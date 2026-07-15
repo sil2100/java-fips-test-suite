@@ -1,0 +1,19 @@
+// Additive policy for running the packaged test suite under a security
+// manager (JDK <= 23) in the melange test environment, where the base
+// java.policy from jdk-fips-config carries only the BC-FJA grants.
+// Applied by run.sh via -Djava.security.policy=<this file> (single '=' is
+// additive; policy.allowSystemProperty=true in the packaged java.security).
+//
+// Property expansion: run.sh passes -Dfipstest.base.
+
+// The test application itself: vector reads, temp keystores, loopback TLS.
+grant codeBase "file:${fipstest.base}/out/classes/-" {
+ permission java.security.AllPermission;
+};
+
+// Loopback TLS tests: BCJSSE code is on the call stack for client connects
+// and server accepts, so these must be global.
+grant {
+ permission java.net.SocketPermission "localhost:1024-", "accept,connect,listen,resolve";
+ permission java.net.SocketPermission "127.0.0.1:1024-", "accept,connect,resolve";
+};

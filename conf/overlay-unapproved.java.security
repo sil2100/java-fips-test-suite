@@ -1,0 +1,6 @@
+# Append-style overlay (single '=' java.security.properties semantics) for
+# runtimes with a baked-in FIPS java.security (openjdk-fips >= 25 images,
+# which ship no /usr/lib/jvm/jdk-fips-config escape hatches). Mirrors
+# the packaged unapproved.java.security escape hatch: flips approved-only mode off, keeps
+# everything else from the baked configuration.
+org.bouncycastle.fips.approved_only=false

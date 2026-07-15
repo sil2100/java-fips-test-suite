@@ -1,0 +1,62 @@
+// Local-development replica of the bcfips-policy-140-3 package java.policy
+// (the grants BC-FJA needs to operate under a security manager, per the BC
+// security policy appendix B), plus an AllPermission grant for the test
+// application's own classes. The BC jars themselves stay on the restricted
+// grant set below - matching how the packaged runtime constrains them.
+//
+// Property expansion: run.sh passes -Dfipstest.base and -Dfipstest.lib.
+
+grant codeBase "file:${fipstest.base}/out/classes/-" {
+ permission java.security.AllPermission;
+};
+
+grant {
+ permission org.bouncycastle.crypto.CryptoServicesPermission "defaultRandomConfig";
+ permission org.bouncycastle.crypto.CryptoServicesPermission "threadLocalConfig";
+ permission org.bouncycastle.crypto.CryptoServicesPermission "globalConfig";
+ permission java.security.SecurityPermission "getProperty.*";
+ permission java.util.PropertyPermission "os.arch", "read";
+ permission java.util.PropertyPermission "os.name", "read";
+ permission java.util.PropertyPermission "java.io.tmpdir", "read";
+ permission java.util.PropertyPermission "org.bouncycastle.*", "read";
+ permission java.util.PropertyPermission "java.runtime.name", "read";
+ permission org.bouncycastle.crypto.CryptoServicesPermission "exportKeys";
+ permission java.lang.RuntimePermission "accessDeclaredMembers";
+ permission java.lang.RuntimePermission "getProtectionDomain";
+ permission java.lang.RuntimePermission "shutdownHooks";
+ permission java.lang.RuntimePermission "loadLibrary.*";
+ permission java.io.FilePermission "${java.io.tmpdir}", "read,write,delete";
+ permission java.io.FilePermission "${java.io.tmpdir}${/}-", "read,write,execute,delete";
+
+ permission java.security.SecurityPermission "insertProvider.BCFIPS";
+ permission java.security.SecurityPermission "putProviderProperty.BCFIPS";
+ permission org.bouncycastle.crypto.CryptoServicesPermission "unapprovedModeEnabled";
+ permission org.bouncycastle.crypto.CryptoServicesPermission "tlsAlgorithmsEnabled";
+ permission org.bouncycastle.crypto.CryptoServicesPermission "changeToApprovedModeEnabled";
+
+ permission java.lang.RuntimePermission "accessClassInPackage.sun.security.internal.spec";
+ permission java.lang.RuntimePermission "accessClassInPackage.sun.security.*";
+ permission java.util.logging.LoggingPermission "control";
+
+ // Location of the bc-fips jars (local: ./lib, packaged: /usr/share/java/...)
+ permission java.io.FilePermission "${fipstest.lib}/-", "read";
+ permission java.io.FilePermission "/usr/share/java/bouncycastle-fips/-", "read";
+
+ permission java.security.SecurityPermission "putProviderProperty.BCJSSE";
+ permission java.util.PropertyPermission "com.sun.net.ssl.*", "read";
+ permission java.util.PropertyPermission "javax.net.ssl.*", "read";
+ permission java.util.PropertyPermission "jdk.tls.*", "read";
+ permission java.util.PropertyPermission "jsse.enableFFDHE", "read";
+ permission java.util.PropertyPermission "jsse.enableSNIExtension", "read";
+ permission java.util.PropertyPermission "sun.security.ssl.allowLegacyHelloMessages", "read";
+ permission java.util.PropertyPermission "org.bouncycastle.jsse.*", "read";
+
+ // Loopback TLS tests (scenarios.tls): BCJSSE code is on the call stack for
+ // client connects and server accepts, so the grant must be global.
+ permission java.net.SocketPermission "localhost:1024-", "accept,connect,listen,resolve";
+ permission java.net.SocketPermission "127.0.0.1:1024-", "accept,connect,resolve";
+
+ permission java.io.FilePermission "${java.home}/lib/security/jssecacerts", "read";
+ permission java.io.FilePermission "${java.home}/lib/security/cacerts", "read";
+ permission java.io.FilePermission "/etc/ssl/certs/java/*", "read";
+};

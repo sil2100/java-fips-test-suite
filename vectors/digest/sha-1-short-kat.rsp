@@ -1,0 +1,53 @@
+# source: NIST CAVP SHA1ShortMsg.rsp (ShortMsg)
+# converted: 2026-07-14 by scripts/curate_cavp_sha.py - do not edit by hand
+
+[algorithm = SHA-1]
+[L = 20]
+
+Len = 0
+Msg = 00
+MD = da39a3ee5e6b4b0d3255bfef95601890afd80709
+
+Len = 40
+Msg = f7fb1be205
+MD = 60b7d5bb560a1acf6fa45721bd0abb419a841a89
+
+Len = 80
+Msg = 9777cf90dd7c7e863506
+MD = 05c915b5ed4e4c4afffc202961f3174371e90b5c
+
+Len = 120
+Msg = 3a36ea49684820a2adc7fc4175ba78
+MD = d58a262ee7b6577c07228e71ae9b3e04c8abcda9
+
+Len = 160
+Msg = 63a3cc83fd1ec1b6680e9974a0514e1a9ecebb6a
+MD = 8bb8c0d815a9c68a1d2910f39d942603d807fbcc
+
+Len = 200
+Msg = 3842b6137bb9d27f3ca5bafe5bbb62858344fe4ba5c41589a5
+MD = fda26fa9b4874ab701ed0bb64d134f89b9c4cc50
+
+Len = 240
+Msg = 75c5ad1f3cbd22e8a95fc3b089526788fb4ebceed3e7d4443da6e081a35e
+MD = 5b7b94076b2fc20d6adb82479e6b28d07c902b75
+
+Len = 280
+Msg = 6fda97527a662552be15efaeba32a3aea4ed449abb5c1ed8d9bfff544708a425d69b72
+MD = 01b4646180f1f6d2e06bbe22c20e50030322673a
+
+Len = 320
+Msg = eb60c28ad8aeda807d69ebc87552024ad8aca68204f1bcd29dc5a81dd228b591e2efb7c4df75ef03
+MD = c06d3a6a12d9e8db62e8cff40ca23820d61d8aa7
+
+Len = 360
+Msg = f6c237fb3cfe95ec8414cc16d203b4874e644cc9a543465cad2dc563488a659e8a2e7c981e2a9f22e5e868ffe1
+MD = 199d986ed991b99a071f450c6b1121a727e8c735
+
+Len = 400
+Msg = e42a67362a581e8cf3d847502215755d7ad425ca030c4360b0f7ef513e6980265f61c9fa18dd9ce668f38dbc2a1ef8f83cd6
+MD = 0e6730bc4a0e9322ea205f4edfff1fffda26af0a
+
+Len = 512
+Msg = 45927e32ddf801caf35e18e7b5078b7f5435278212ec6bb99df884f49b327c6486feae46ba187dc1cc9145121e1492e6b06e9007394dc33b7748f86ac3207cfe
+MD = a70cfbfe7563dd0e665c7c6715a96a8d756950c0
